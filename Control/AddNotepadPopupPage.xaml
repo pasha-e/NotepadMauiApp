@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NotepadMauiApp.Control.AddNotepadPopupPage"
+             Title="Добавить блокнот"
+             BackgroundColor="Transparent"  
+             Background="Transparent">
+
+
+    <!-- Чёрный с прозрачностью 50% -->
+    <Grid BackgroundColor="#80000000">
+        
+        <!-- Основной контейнер Popup -->
+        <Frame VerticalOptions="Center" 
+               HorizontalOptions="Center"
+               BackgroundColor="LightGray"
+               CornerRadius="20"
+               Padding="20"
+               WidthRequest="400"
+               HeightRequest="400">
+
+            <VerticalStackLayout Padding="20" Spacing="15">
+                <Label Text="Создать новый блокнот"
+                       FontSize="24"
+                       TextColor="Black"/>
+
+                <Label Text="Название" TextColor="Black"/>
+                <Entry x:Name="EntryName" Placeholder="название блокнота" BackgroundColor="#f0eded" TextColor="Black"/>
+
+                <Label Text="Краткое описание" TextColor="Black"/>
+                <Entry x:Name="EntryDescription" Placeholder="описание"  BackgroundColor="#f0eded" TextColor="Black"/>
+
+                <HorizontalStackLayout Margin="0,30,0,0" HorizontalOptions="Center">
+                    <Button Text="Отмена" 
+                            Clicked="OnCancelClicked" 
+                            />
+
+                    <Button Text="Готово" 
+                            Clicked="OnSubmitClicked" 
+                            Margin="50,0,0,0"/>
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+        </Frame>
+    </Grid>
+</ContentPage>

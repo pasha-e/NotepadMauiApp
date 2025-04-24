@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NotepadMauiApp.Control.AddNoteInfoPopupPage"
+             Title="AddNoteInfoPopupPage"
+             BackgroundColor="Transparent"  
+             Background="Transparent">
+
+    <!-- Чёрный с прозрачностью 50% -->
+    <Grid BackgroundColor="#80000000">
+
+        <!-- Основной контейнер Popup -->
+        <Frame VerticalOptions="Center" 
+               HorizontalOptions="Center"
+               BackgroundColor="LightGray"
+               CornerRadius="20"
+               Padding="20"
+               WidthRequest="400"
+               HeightRequest="250">
+
+            <VerticalStackLayout Padding="20" Spacing="15">
+                <Label Text="Создать заметку"
+                       FontSize="24"
+                       TextColor="Black"/>
+
+                <Entry x:Name="EntryInfo" Placeholder="введите текст заметки"
+                       BackgroundColor="#f0eded" 
+                       TextColor="Black"/>
+
+                <HorizontalStackLayout Margin="0,30,0,0" HorizontalOptions="Center">
+                    <Button Text="Отмена" 
+                            Clicked="OnCancelClicked" 
+                    />
+
+                    <Button Text="Готово" 
+                            Clicked="OnSubmitClicked" 
+                            Margin="50,0,0,0"/>
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+        </Frame>
+    </Grid>
+</ContentPage>

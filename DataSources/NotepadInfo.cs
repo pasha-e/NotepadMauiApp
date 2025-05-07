@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace NotepadMauiApp.DataSources
 {
-    public class NotepadInfo 
+    public class NotepadInfo : INotifyPropertyChanged
     {
         public int Id { get; set; }
 
@@ -19,6 +19,24 @@ namespace NotepadMauiApp.DataSources
 
         //public List<NoteInfo> Notes { get; set; } = new List<NoteInfo>();
         public ObservableCollection<NoteInfo> Notes { get; set; } = new ObservableCollection<NoteInfo>();
+
+        private bool _isSelected = false;
+        public bool IsSelected
+        {
+            get => _isSelected;
+            set
+            {
+                _isSelected = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public event PropertyChangedEventHandler? PropertyChanged;
+        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
 
     }
 }

@@ -13,8 +13,8 @@
         <!-- Основной контейнер Popup -->
         <Frame VerticalOptions="Center" 
                HorizontalOptions="Center"
-               BackgroundColor="LightGray"
-               CornerRadius="20"
+               BackgroundColor="#f7f8fc"
+               CornerRadius="5"
                Padding="20"
                WidthRequest="400"
                HeightRequest="400">
@@ -24,11 +24,19 @@
                        FontSize="24"
                        TextColor="Black"/>
 
-                <Label Text="Название" TextColor="Black"/>
-                <Entry x:Name="EntryName" Placeholder="название блокнота" BackgroundColor="#f0eded" TextColor="Black"/>
+                <Label Text="Название" 
+                       TextColor="Black"/>
+                <Entry x:Name="EntryName" 
+                       Placeholder="название блокнота" 
+                       BackgroundColor="#f0eded" 
+                       TextColor="Black"/>
 
-                <Label Text="Краткое описание" TextColor="Black"/>
-                <Entry x:Name="EntryDescription" Placeholder="описание"  BackgroundColor="#f0eded" TextColor="Black"/>
+                <Label Text="Краткое описание" 
+                       TextColor="Black"/>
+                <Entry x:Name="EntryDescription" 
+                       Placeholder="описание"  
+                       BackgroundColor="#f0eded" 
+                       TextColor="Black"/>
 
                 <HorizontalStackLayout Margin="0,30,0,0" HorizontalOptions="Center">
                     <Button Text="Отмена" 
